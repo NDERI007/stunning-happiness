@@ -36,6 +36,8 @@ function addClasses(button) {
     const NumberClass = "hover:bg-neutral-700 border-zinc-800";
     const btncLEarClass = "hover:bg-fuchsia-700 border-pink-600";
     const btnOpclass = "hover:bg-slate-400 border-stone-900";
+    const equalBtn = "hover:bg-fuchsia-700 border-rose-800";
+    const decBtn = "hover:bg-red-900 border-fuchsia-900";
 
     if (button.classList.value === "number" ) {
         NumberClass.split(' ').forEach((cls) => button.classList.add(cls));
@@ -44,6 +46,12 @@ function addClasses(button) {
     }
     else if (button.classList.value === "clear")  {
         btncLEarClass.split(' ').forEach((cls) => button.classList.add(cls));
+    }
+    else if (button.classList.value === "equal")  {
+        equalBtn.split(' ').forEach((cls) => button.classList.add(cls)); 
+    }
+    else if (button.classList.value === "decimal")  {
+        decBtn.split(' ').forEach((cls) => button.classList.add(cls));
     }
     const baseClass = "number flex w-12 h-12 justify-center items-center m-1 font-bold py-2 px-2 border hover:border-transparent rounded text-white border-2 text-2xl";
     baseClass.split(' ').forEach((cls) => button.classList.add(cls));
